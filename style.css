@@ -1,0 +1,484 @@
+/* variaveis de cores */
+:root {
+    --pink: #D8A2A2;
+    --pink-light: #FFDCDC;
+    --cream: #FFF9D6;
+    --green: #8EA66B;
+
+    --green-dark: #607744;
+    --pink-dark: #B87979;
+    --text: #45483D;
+    --white: #FFFFFF;
+}
+
+/* reset css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+/* configurações global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--cream);
+    color: var(--text);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* cabeçalho */
+
+header {
+    width: 100%;
+    padding: 20px 20%;
+    background-color: var(--cream);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid var(--pink-light);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--pink-dark);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-list a {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--green);
+}
+
+.nav-list a:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 5px;
+}
+
+/* banner */
+
+.banner {
+    min-height: 80vh;
+    padding: 80px 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background: radial-gradient(circle at 85% 50%, var(--pink-light), var(--pink-light) 30%, var(--cream) 100%);
+}
+
+.banner-content {
+    max-width: 650px;
+}
+
+.banner-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.2;
+    color: var(--pink-dark);
+    margin-bottom: 20px;
+}
+
+.banner-content h1::after {
+    content: ".";
+    color: var(--green);
+}
+
+.banner-content h1 span {
+    display: block;
+    margin-top: 10px;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--green-dark);
+}
+
+.banner-description {
+    max-width: 520px;
+    color: var(--text);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.banner-image {
+    width: 600px;
+    flex-shrink: 0;
+}
+
+.banner-image img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+
+    border-radius: 25%;
+    border: 5px solid var(--pink);
+    box-shadow: 0 15px 35px rgba(96, 119, 68, 0.15);
+}
+
+/* btns */
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background-color: var(--green);
+    color: var(--white);
+
+    border: 2px solid var(--green);
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--green-dark);
+    border-color: var(--green-dark);
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(96, 119, 68, 0.2);
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--pink-dark);
+    outline-offset: 4px;
+}
+
+/* seções em geral */
+
+.section {
+    padding: 90px 20%;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    color: var(--green-dark);
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+
+    width: 60px;
+    height: 4px;
+
+    margin-top: 15px;
+
+    background-color: var(--pink);
+    border-radius: 5px;
+}
+
+.section-description {
+    max-width: 750px;
+    color: var(--text);
+    margin: 20px 0 35px 0;
+    font-size: 1.1rem;
+}
+
+/* sobre mim */
+
+.about {
+    background-color: var(--cream);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h3,
+.about-highlight h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: var(--green-dark);
+}
+
+.about-text p {
+    color: var(--text);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.about-highlight {
+    padding: 30px;
+
+    background-color: var(--pink-light);
+    border: 1px solid var(--pink);
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(184, 121, 121, 0.1);
+}
+
+.about-highlight p {
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+/* habilidades */
+
+.skills {
+    background-color: var(--pink-light);
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skills-list li {
+    padding: 25px;
+
+    background-color: var(--cream);
+    border: 2px solid var(--pink);
+    border-radius: 16px;
+
+    transform: transform 0.3s ease-in-out;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+    border-color: var(--green);
+    box-shadow: 0 10px 25px rgba(96, 119, 68, 0.12);
+}
+
+.skill-number {
+    display: inline-block;
+    color: var(--pink-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.skills-list h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--green-dark);
+}
+
+.skills-list li:nth-child(2) {
+    background-color: #f8e7e7;
+}
+
+/* projetos */
+
+.projects {
+    background-color: var(--cream);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    overflow: hidden;
+    background-color: #ffffe4;
+    border: 1px solid var(--pink);
+    border-radius: 16px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(96, 119, 68, 0, 15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--pink-light);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    font-size: 1.3rem;
+    margin: 12px 0;
+    color: var(--green-dark)
+}
+
+.project-content p {
+    color: var(--text);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--green-dark);
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.project-link:hover{
+    border-color: var(--pink-dark);
+}
+
+/* contato */
+
+.contact {
+    background-color: var(--pink-light);
+}
+
+.contact-form{
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 30px;
+
+    background-color: var(--cream);
+    border: 1px solid var(--pink);
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(184, 121, 121, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+
+    background-color: #ffffe4;
+    color: var(--text);
+
+    border: 1px solid var(--pink);
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #85816F;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--green-dark);
+
+    box-shadow: 0 0 0 3px rgba(142, 166, 107, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+
+/* footer */
+
+.site-footer {
+    padding: 35px 20%;
+
+    background-color: var(--pink);
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.site-footer .logo {
+    color: var(--white);
+}
+
+.site-footer .logo span {
+    color: var(--cream);
+}
+
+.site-footer p {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.social-list {
+    display: flex;
+    gap: 20px;
+}
+
+.social-list a {
+    color: var(--white);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.social-list a:hover {
+    color: var(--green-dark);
+}
